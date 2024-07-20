@@ -1,0 +1,23 @@
+sort1 uses:  Bubble Sort
+
+How do you know?:
+
+reversed50000.txt --> 6.899s
+sorted50000.txt --> 1.351s
+sort 1 is fast in executing of sorted 50000.txt than sort3 . so it is Bubble sort.
+------------------------------
+sort2 uses: Merge Sort
+
+How do you know?:
+
+reversed50000.txt --> 0.773s
+we can eassily say that Merg sort is very faster than other in worest case scenario of random or reversed numbers .
+so sort 2 has take less time to execute reversed 50000.txt
+------------------------------
+sort3 uses: Selection Sort
+
+How do you know?:
+
+reversed50000.txt --> 2.737s
+sorted50000.txt --> 4.139s
+sort 3 takes more time in sorted50000.txt . so definitely it is not a bubble sort .
