@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+            function checkMultipleChoice(answer) {
+            var correctAnswer = "Amaravati";
+            var userAnswer = answer.innerText;
+
+            if (userAnswer === correctAnswer) {
+                answer.style.backgroundColor = "green";
+                document.getElementById("multiple-choice-answer").innerText = "Correct!";
+            } else {
+                answer.style.backgroundColor = "red";
+                document.getElementById("multiple-choice-answer").innerText = "Incorrect";
+            }
+        }
+
+        function checkFreeResponse() {
+            var userInput = document.getElementById("free-response-input").value.toLowerCase();
+            var correctAnswer = "Pawan Kalyan";
+            var inputField = document.getElementById("free-response-input");
+
+            if (userInput === correctAnswer.toLowerCase()) {
+                inputField.style.backgroundColor = "green";
+                document.getElementById("free-response-answer").innerText = "Correct!";
+            } else {
+                inputField.style.backgroundColor = "red";
+                document.getElementById("free-response-answer").innerText = "Incorrect";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>HELLO AP .....!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Question 1: Multiple Choice </h2>
+            <hr>
+            <div id="multiple-choice-question">
+                <h3>What is the capital of Andhra Pradesh?</h3>
+                <button onclick="checkMultipleChoice(this)">Amaravati</button>
+                <button onclick="checkMultipleChoice(this)">Visakhapatnam</button>
+                <button onclick="checkMultipleChoice(this)">Kurnool</button>
+            </div>
+            <div id="multiple-choice-answer"></div>
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <div id="free-response-question">
+                <h3>Who is the next Chief Minister of the Andhra Pradesh?</h3>
+                <input type="text" id="free-response-input">
+                <button onclick="checkFreeResponse()">Confirm Answer</button>
+            </div>
+            <div id="free-response-answer"></div>
+        </div>
+    </div>
+</body>
+</html>
