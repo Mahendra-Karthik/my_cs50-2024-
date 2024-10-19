@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Exam</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Exam</h1>
+        <form method="POST">
+            {% for question in questions %}
+                <div class="question">
+                    <p>{{ loop.index }}. {{ question.content }}</p>
+                    <div class="options">
+                        <input type="radio" name="{{ question.id }}" value="{{ question.option1 }}"> {{ question.option1 }}<br>
+                        <input type="radio" name="{{ question.id }}" value="{{ question.option2 }}"> {{ question.option2 }}<br>
+                        <input type="radio" name="{{ question.id }}" value="{{ question.option3 }}"> {{ question.option3 }}<br>
+                        <input type="radio" name="{{ question.id }}" value="{{ question.option4 }}"> {{ question.option4 }}<br>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="form-group">
+                <input type="submit" value="Submit Exam" class="btn-primary">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

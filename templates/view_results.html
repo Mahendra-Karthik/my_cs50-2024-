@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>View Results</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Exam Results</h1>
+        {% if result %}
+            <p>Latest Score: {{ result.score }}</p>
+        {% else %}
+            <p>You haven't taken any exams yet.</p>
+        {% endif %}
+        <p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+    </div>
+</body>
+</html>
